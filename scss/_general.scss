@@ -9,8 +9,16 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -18,8 +26,9 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
-  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  // background:rgba(204, 204, 204, 0.404);
+  background: linear-gradient(90deg,  #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060);
 }
 
 img {
