@@ -453,10 +453,17 @@ img {
 .contact__item {
   width: 400px;
   height: 150px;
+  position: relative;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-bottom: 18px;
+  -webkit-animation-name: rights;
+          animation-name: rights;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: 1;
+          animation-timing-function: 1;
 }
 
 .contact__name {
@@ -466,6 +473,35 @@ img {
   margin-left: 30px;
 }
 
+@-webkit-keyframes rights {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes rights {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
 .contact__category {
   font-size: 16px;
   font-weight: 400;
@@ -548,4 +584,23 @@ img {
   border: 1px solid #ccc;
   border-radius: 20px;
   outline: none;
+}
+
+.btn--active {
+  background-color: #fff;
+  color: #0D6EFD;
+  border-color: #0D6EFD;
+}
+
+.delete__btn {
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  background: #0D6EFD;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
