@@ -17,7 +17,7 @@ elFrein.addEventListener("click",freinds)
 elRelatives.addEventListener("click",relativ);
 elAll.addEventListener("click",alls)
 function output() {
-  if(elInpName.value != "" && elInpRelation.value !=  "" && elInpTel.value != "") {
+  if(elInpName.value != "" && elInpRelation.value !=  "" && elInpTel.value != "" && elInpTel.value.match(/\+998[389][012345789][0-9]{7}$/g)) {
     let user = {};
     user['names'] = elInpName.value,
     user['relationship'] = elInpRelation.value,
@@ -71,7 +71,7 @@ function search(e) {
 function alls() {
   elList.innerHTML = "";
   arr.forEach(items => {
-    if(items.relationship.toLowerCase() == "family" || items.relationship.toLowerCase() == "freinds" || items.relationship.toLowerCase() == "relativeы") {
+    if(items.relationship.toLowerCase() == "family" || items.relationship.toLowerCase() == "freinds" || items.relationship.toLowerCase() == "relatives" || elInpTel.value.match(/\+998[389][012345789][0-9]{7}$/g)) {
       let item = document.createElement('li');
       let h2 = document.createElement('h2');
       let p = document.createElement('p');
@@ -104,7 +104,7 @@ function familys() {
   elList.innerHTML = "";
   console.log(arr);
   arr.forEach(items => {
-    if(items.relationship.toLowerCase() == "family"){
+    if(items.relationship.toLowerCase() == "family" || elInpTel.value.match(/\+998[389][012345789][0-9]{7}$/g)){
       let item = document.createElement('li');
       let h2 = document.createElement('h2');
       let p = document.createElement('p');
@@ -135,7 +135,7 @@ function familys() {
 function freinds() {
   elList.innerHTML = "";
   arr.forEach(items => {
-    if(items.relationship.toLowerCase() == "freinds"){
+    if(items.relationship.toLowerCase() == "freinds" || elInpTel.value.match(/\+998[389][012345789][0-9]{7}$/g)){
       let item = document.createElement('li');
       let h2 = document.createElement('h2');
       let p = document.createElement('p');
@@ -167,7 +167,7 @@ function freinds() {
 function relativ() {
   elList.innerHTML = "";
   arr.forEach(items => {
-    if(items.relationship.toLowerCase() == "relatives"){
+    if(items.relationship.toLowerCase() == "relatives" || elInpTel.value.match(/\+998[389][012345789][0-9]{7}$/g)){
       let item = document.createElement('li');
       let h2 = document.createElement('h2');
       let p = document.createElement('p');
@@ -194,3 +194,27 @@ function relativ() {
   elFamily.classList.remove('btn--active');
   elFrein.classList.remove('btn--active');
 } 
+
+
+// let student = {
+//   stname: "Umid",
+//   age: 20,
+// }
+
+// let a = Object.values(student); 
+// let b = Object.entries(student)
+// console.log(a);
+// console.log(b);
+
+// let text = "Umid Nima gap";
+// console.log(text.charCodeAt('85'));
+
+// console.log(text.split("U"));
+
+// let text = "+998935861055";
+// console.log(text.startsWith('Um'));
+// console.log(text.includes('d'));
+// console.log(text.match(/\+998[389][012345789][0-9]{7}$/g));
+
+
+// let year = 2021;
